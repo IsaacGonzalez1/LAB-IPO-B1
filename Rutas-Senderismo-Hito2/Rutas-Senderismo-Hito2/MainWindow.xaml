@@ -5,8 +5,41 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Rutas_Senderismo_Hito2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="Login" Height="450" Width="800">
+    <Grid x:Name="Diseño">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="179*"/>
+            <ColumnDefinition Width="66*"/>
+            <ColumnDefinition Width="144*"/>
+            <ColumnDefinition Width="144*"/>
+            <ColumnDefinition Width="66*"/>
+            <ColumnDefinition Width="179*"/>
+        </Grid.ColumnDefinitions>
+
+        <Rectangle x:Name="FondoVentana" HorizontalAlignment="Left" Height="434" Grid.RowSpan="9" Stroke="Black" VerticalAlignment="Top" Width="800" Grid.ColumnSpan="6">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/fondo login.jpg"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle x:Name="FondoLogin" Grid.Column="1" Grid.ColumnSpan="4" HorizontalAlignment="Center" Height="252" Grid.Row="1" VerticalAlignment="Center" Width="412" RenderTransformOrigin="0.499,0.509" Grid.RowSpan="6" Fill="#FFFFFDFD" Opacity="0.7" RadiusX="10" RadiusY="10"/>
+        <TextBox x:Name="txtUsuario" Grid.Column="2" Grid.ColumnSpan="2" HorizontalAlignment="Center" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Center" Width="276" Height="36"/>
+        <TextBox Grid.Column="2" Grid.ColumnSpan="2" HorizontalAlignment="Center" Grid.Row="5" TextWrapping="Wrap" VerticalAlignment="Center" Width="276" Height="36"/>
+        <Label x:Name="lblLoginTitulo" Grid.Column="2" Content="Iniciar Sesión" HorizontalAlignment="Left" Margin="10,20,0,0" Grid.Row="1" VerticalAlignment="Top" Height="42" Width="138" FontSize="20"/>
+        <Label x:Name="lblUsuario" Grid.Column="2" Content="Usuario" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Center" Margin="10,0,0,0" FontSize="14"/>
+        <Label x:Name="lblContraseña" Grid.Column="2" Content="Contraseña" HorizontalAlignment="Left" Margin="10,3,0,0" Grid.Row="4" VerticalAlignment="Top" FontSize="14"/>
+        <Button Grid.Column="3" Content="Entrar" HorizontalAlignment="Center" Margin="0,10,0,0" Grid.Row="6" VerticalAlignment="Top" Height="32" Width="128" FontSize="14"/>
+
     </Grid>
 </Window>

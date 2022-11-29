@@ -1,0 +1,16 @@
+C:\Users\Isaaki100\Desktop\IPO 1\Rutas-Senderismo-B1\Rutas-Senderismo-Hito2\Rutas-Senderismo-Hito2\bin\Debug\Rutas-Senderismo-Hito2.exe.config
+C:\Users\Isaaki100\Desktop\IPO 1\Rutas-Senderismo-B1\Rutas-Senderismo-Hito2\Rutas-Senderismo-Hito2\bin\Debug\Rutas-Senderismo-Hito2.exe
+C:\Users\Isaaki100\Desktop\IPO 1\Rutas-Senderismo-B1\Rutas-Senderismo-Hito2\Rutas-Senderismo-Hito2\bin\Debug\Rutas-Senderismo-Hito2.pdb
+C:\Users\Isaaki100\Desktop\IPO 1\Rutas-Senderismo-B1\Rutas-Senderismo-Hito2\Rutas-Senderismo-Hito2\obj\Debug\Rutas-Senderismo-Hito2.csproj.AssemblyReference.cache
+C:\Users\Isaaki100\Desktop\IPO 1\Rutas-Senderismo-B1\Rutas-Senderismo-Hito2\Rutas-Senderismo-Hito2\obj\Debug\Rutas-Senderismo-Hito2.csproj.SuggestedBindingRedirects.cache
+C:\Users\Isaaki100\Desktop\IPO 1\Rutas-Senderismo-B1\Rutas-Senderismo-Hito2\Rutas-Senderismo-Hito2\obj\Debug\MainWindow.g.cs
+C:\Users\Isaaki100\Desktop\IPO 1\Rutas-Senderismo-B1\Rutas-Senderismo-Hito2\Rutas-Senderismo-Hito2\obj\Debug\App.g.cs
+C:\Users\Isaaki100\Desktop\IPO 1\Rutas-Senderismo-B1\Rutas-Senderismo-Hito2\Rutas-Senderismo-Hito2\obj\Debug\Rutas-Senderismo-Hito2_MarkupCompile.cache
+C:\Users\Isaaki100\Desktop\IPO 1\Rutas-Senderismo-B1\Rutas-Senderismo-Hito2\Rutas-Senderismo-Hito2\obj\Debug\Rutas-Senderismo-Hito2_MarkupCompile.lref
+C:\Users\Isaaki100\Desktop\IPO 1\Rutas-Senderismo-B1\Rutas-Senderismo-Hito2\Rutas-Senderismo-Hito2\obj\Debug\MainWindow.baml
+C:\Users\Isaaki100\Desktop\IPO 1\Rutas-Senderismo-B1\Rutas-Senderismo-Hito2\Rutas-Senderismo-Hito2\obj\Debug\Rutas-Senderismo-Hito2.g.resources
+C:\Users\Isaaki100\Desktop\IPO 1\Rutas-Senderismo-B1\Rutas-Senderismo-Hito2\Rutas-Senderismo-Hito2\obj\Debug\Rutas_Senderismo_Hito2.Properties.Resources.resources
+C:\Users\Isaaki100\Desktop\IPO 1\Rutas-Senderismo-B1\Rutas-Senderismo-Hito2\Rutas-Senderismo-Hito2\obj\Debug\Rutas-Senderismo-Hito2.csproj.GenerateResource.cache
+C:\Users\Isaaki100\Desktop\IPO 1\Rutas-Senderismo-B1\Rutas-Senderismo-Hito2\Rutas-Senderismo-Hito2\obj\Debug\Rutas-Senderismo-Hito2.csproj.CoreCompileInputs.cache
+C:\Users\Isaaki100\Desktop\IPO 1\Rutas-Senderismo-B1\Rutas-Senderismo-Hito2\Rutas-Senderismo-Hito2\obj\Debug\Rutas-Senderismo-Hito2.exe
+C:\Users\Isaaki100\Desktop\IPO 1\Rutas-Senderismo-B1\Rutas-Senderismo-Hito2\Rutas-Senderismo-Hito2\obj\Debug\Rutas-Senderismo-Hito2.pdb
