@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("fondo%20login.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("contrase%c3%b1avisible.png")]
 
 

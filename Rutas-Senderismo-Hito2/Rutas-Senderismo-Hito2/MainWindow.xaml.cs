@@ -24,7 +24,7 @@ namespace Rutas_Senderismo_Hito2
         private Usuarios admin2 = new Usuarios("Natalia", "Jimenez", "admin2", "admin2");
         private BitmapImage imagCheck = new BitmapImage(new Uri("/Imagenes/check.png", UriKind.Relative));
         private BitmapImage imagCross = new BitmapImage(new Uri("/Imagenes/cross.png", UriKind.Relative));
-        //arreglar source de las imágenes
+       
         public MainWindow()
         {
             InitializeComponent();
@@ -77,6 +77,50 @@ namespace Rutas_Senderismo_Hito2
                 valido = false;
             }
             return valido;
+        }
+        private Boolean ComprobarEntradaContrasenia(string valorIntroducido, string valorValido, string ContraseniaIntroducida, string ContraseniaValida, Control componenteEntrada, Image imagenFeedBack)
+        {
+            Boolean valido = false;
+            if (valorIntroducido.Equals(valorValido) && ContraseniaIntroducida.Equals(ContraseniaValida))
+            {
+                // borde y background en verde
+                componenteEntrada.BorderBrush = Brushes.Green;
+                componenteEntrada.Background = Brushes.LightGreen;
+                // imagen al lado de la entrada de usuario --> check
+                imagenFeedBack.Source = imagCheck;
+                valido = true;
+            }
+            else
+            {
+                // marcamos borde en rojo
+                componenteEntrada.BorderBrush = Brushes.Red;
+                // imagen al lado de la entrada de usuario --> cross
+                imagenFeedBack.Source = imagCross;
+                valido = false;
+            }
+            return valido;
+        }
+
+       
+        private void CheckBoxContraseña_Click(object sender, RoutedEventArgs e)
+        {
+            if ((bool)CheckBoxContraseña.IsChecked)
+            {
+                txtContraseña.Text = ContraseñaBox.Password;
+                txtContraseña.Visibility = Visibility.Visible;
+                ContraseñaBox.Visibility = Visibility.Hidden;
+
+            }
+            else
+            {
+                txtContraseña.Visibility = Visibility.Hidden;
+                ContraseñaBox.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void ContraseñaBox_KeyUp(object sender, KeyEventArgs e)
+        {
+         
         }
     }
 }
