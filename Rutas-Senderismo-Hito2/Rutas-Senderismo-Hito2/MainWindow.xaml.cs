@@ -22,92 +22,27 @@ namespace Rutas_Senderismo_Hito2
     {
         private Usuarios admin = new Usuarios("Isaac", "Gonzalez", "admin1", "admin1");
         private Usuarios admin2 = new Usuarios("Natalia", "Jimenez", "admin2", "admin2");
-        private BitmapImage imagCheck = new BitmapImage(new Uri("/Imagenes/check.png", UriKind.Relative));
-        private BitmapImage imagCross = new BitmapImage(new Uri("/Imagenes/cross.png", UriKind.Relative));
-       
+
         public MainWindow()
         {
             InitializeComponent();
+            lbl_incorrectocampos.Visibility = Visibility.Hidden;
         }
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             Application.Current.Shutdown();
         }
 
-        private void txtUsuario_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.Key == Key.Return)
-            {
-
-                if (!String.IsNullOrEmpty(txtUsuario.Text)
-                && (ComprobarEntrada(txtUsuario.Text, admin.Usuario,
-                txtUsuario, imgCheckUsuario) || ComprobarEntrada(txtUsuario.Text, admin2.Usuario,
-                txtUsuario, imgCheckUsuario) ))
-                {
-                    // habilitar entrada de contraseña y pasarle el foco
-                    ContraseñaBox.IsEnabled = true;
-                    ContraseñaBox.Focus();
-                    // deshabilitar entrada de login
-                    txtUsuario.IsEnabled = false;
-                }
-            }
-
-        }
 
 
-        private Boolean ComprobarEntrada(string valorIntroducido, string valorValido, Control componenteEntrada, Image imagenFeedBack)
-        {
-            Boolean valido = false;
-            componenteEntrada.BorderThickness = new Thickness(2);
-            if (valorIntroducido.Equals(valorValido))
-            {
-                // borde y background en verde
-                componenteEntrada.BorderBrush = Brushes.Green;
-                componenteEntrada.Background = Brushes.LightGreen;
-                // imagen al lado de la entrada de usuario --> check
-                imagenFeedBack.Source = imagCheck;
-                valido = true;
-            }
-            else
-            {
-                // marcamos borde en rojo
-                componenteEntrada.BorderBrush = Brushes.Red;
-                // imagen al lado de la entrada de usuario --> cross
-                imagenFeedBack.Source = imagCross;
-                valido = false;
-            }
-            return valido;
-        }
-        private Boolean ComprobarEntradaContrasenia(string valorIntroducido, string valorValido, string ContraseniaIntroducida, string ContraseniaValida, Control componenteEntrada, Image imagenFeedBack)
-        {
-            Boolean valido = false;
-            if (valorIntroducido.Equals(valorValido) && ContraseniaIntroducida.Equals(ContraseniaValida))
-            {
-                // borde y background en verde
-                componenteEntrada.BorderBrush = Brushes.Green;
-                componenteEntrada.Background = Brushes.LightGreen;
-                // imagen al lado de la entrada de usuario --> check
-                imagenFeedBack.Source = imagCheck;
-                valido = true;
-            }
-            else
-            {
-                // marcamos borde en rojo
-                componenteEntrada.BorderBrush = Brushes.Red;
-                // imagen al lado de la entrada de usuario --> cross
-                imagenFeedBack.Source = imagCross;
-                valido = false;
-            }
-            return valido;
-        }
 
-       
         private void CheckBoxContraseña_Click(object sender, RoutedEventArgs e)
         {
             if ((bool)CheckBoxContraseña.IsChecked)
             {
                 txtContraseña.Text = ContraseñaBox.Password;
                 txtContraseña.Visibility = Visibility.Visible;
+                txtContraseña.IsEnabled = false;
                 ContraseñaBox.Visibility = Visibility.Hidden;
 
             }
@@ -120,7 +55,34 @@ namespace Rutas_Senderismo_Hito2
 
         private void ContraseñaBox_KeyUp(object sender, KeyEventArgs e)
         {
-         
+            if (e.Key == Key.Return)
+            {
+                btnLogin_Click(sender, e);
+            }
+
         }
+
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        {
+            if (txtUsuario.Text.Equals(admin.Usuario) && ContraseñaBox.Password.Equals(admin.Contrasena) || txtUsuario.Text.Equals(admin2.Usuario) && ContraseñaBox.Password.Equals(admin2.Contrasena))
+            {
+                MessageBox.Show("ha furulado");
+                //Menu menu = new Menu(u, this);
+                Visibility = Visibility.Hidden;
+                lbl_incorrectocampos.Visibility = Visibility.Hidden;
+                //Menu.Show();
+            }
+            else
+            {
+                lbl_incorrectocampos.Visibility = Visibility.Visible;
+                ContraseñaBox.Password = "";
+                txtUsuario.Text = "";
+                txtContraseña.Text = "";
+            }
+
+        }
+
+
+       
     }
 }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Rutas_Senderismo_Hito2"
         mc:Ignorable="d"
-        Title="Login" Height="450" Width="800">
+        Title="Login" Height="450" Width="800" ResizeMode="NoResize">
     <Grid x:Name="Diseño">
         <Grid.RowDefinitions>
             <RowDefinition Height="100*"/>
@@ -27,26 +27,25 @@
             <ColumnDefinition Width="179*"/>
         </Grid.ColumnDefinitions>
 
-        <Rectangle x:Name="FondoVentana" HorizontalAlignment="Left" Height="434" Grid.RowSpan="9" Stroke="Black" VerticalAlignment="Top" Width="800" Grid.ColumnSpan="6">
+        <Rectangle x:Name="FondoVentana" HorizontalAlignment="Left" Height="434" Grid.RowSpan="9" Stroke="Black" VerticalAlignment="Top" Width="800" Grid.ColumnSpan="6" Grid.IsSharedSizeScope="True">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="/Imagenes/fondo login.jpg"/>
             </Rectangle.Fill>
         </Rectangle>
 
         <Rectangle x:Name="FondoLogin" Grid.Column="1" Grid.ColumnSpan="4" HorizontalAlignment="Center" Height="252" Grid.Row="1" VerticalAlignment="Center" Width="412" RenderTransformOrigin="0.499,0.509" Grid.RowSpan="6" Fill="#FFDEDEDE" Opacity="0.7" RadiusX="10" RadiusY="10"/>
-        <TextBox x:Name="txtUsuario" Grid.Column="2" Grid.ColumnSpan="2" HorizontalAlignment="Center" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Center" Width="276" Height="36" KeyDown="txtUsuario_KeyDown"/>
+        <TextBox x:Name="txtUsuario" Grid.Column="2" Grid.ColumnSpan="2" HorizontalAlignment="Center" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Center" Width="276" Height="36" />
 
-        <TextBox x:Name="txtContraseña" Grid.Column="2" Grid.ColumnSpan="2" HorizontalAlignment="Center" Grid.Row="5" TextWrapping="Wrap" VerticalAlignment="Center" Width="276" Height="36"/>
+        <TextBox x:Name="txtContraseña" Grid.Column="2" Grid.ColumnSpan="2" HorizontalAlignment="Center" Grid.Row="5" TextWrapping="Wrap" VerticalAlignment="Center" Width="276" Height="36" Visibility="Hidden"/>
 
         <Label x:Name="lblLoginTitulo" Grid.Column="2" Content="Iniciar Sesión" HorizontalAlignment="Left" Margin="10,20,0,0" Grid.Row="1" VerticalAlignment="Top" Height="42" Width="138" FontSize="20"/>
         <Label x:Name="lblUsuario" Grid.Column="2" Content="Usuario" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Margin="0,7,0,0" FontSize="14"/>
         <Label x:Name="lblContraseña" Grid.Column="2" Content="Contraseña" HorizontalAlignment="Left" Grid.Row="4" VerticalAlignment="Top" FontSize="14" Width="90" Margin="0,7,0,0" Grid.RowSpan="2"/>
-        <Button x:Name="btnLogin" Grid.Column="3" Content="Entrar" HorizontalAlignment="Center" Grid.Row="6" VerticalAlignment="Center" Height="32" Width="128" FontSize="14"/>
+        <Button x:Name="btnLogin" Grid.Column="3" Content="Entrar" HorizontalAlignment="Center" Grid.Row="6" VerticalAlignment="Center" Height="32" Width="128" FontSize="14" Click="btnLogin_Click"/>
 
         <PasswordBox x:Name="ContraseñaBox" Grid.Column="2" HorizontalAlignment="Center" Grid.Row="5" VerticalAlignment="Center" Width="276" Height="36" Grid.ColumnSpan="2" KeyUp="ContraseñaBox_KeyUp" />
-
-        <Image x:Name="imgCheckUsuario" Grid.Column="3" HorizontalAlignment="Left" Height="44" Margin="148,31,0,0" Grid.Row="2" VerticalAlignment="Top" Width="42" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
         <CheckBox x:Name="CheckBoxContraseña" Grid.Column="2" Content="Visualizar contraseña" HorizontalAlignment="Left" Margin="10,5,0,0" Grid.Row="6" VerticalAlignment="Top" Height="32" Width="123" FontSize="10" Click="CheckBoxContraseña_Click"/>
+        <Label x:Name="lbl_incorrectocampos" Grid.Column="2" Content="Usuario o contraseña incorrectos" HorizontalAlignment="Left" Margin="102,10,0,0" Grid.Row="2" VerticalAlignment="Top" Height="31" Width="228" Grid.RowSpan="2" FontSize="11" FontWeight="Bold" Foreground="#FFFD0606" Grid.ColumnSpan="3" d:IsHidden="True"/>
 
     </Grid>
 </Window>

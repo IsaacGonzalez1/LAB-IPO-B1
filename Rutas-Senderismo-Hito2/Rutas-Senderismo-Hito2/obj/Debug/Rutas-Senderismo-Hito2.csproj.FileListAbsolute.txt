@@ -14,3 +14,5 @@ C:\Users\Isaaki100\Desktop\IPO 1\Rutas-Senderismo-B1\Rutas-Senderismo-Hito2\Ruta
 C:\Users\Isaaki100\Desktop\IPO 1\Rutas-Senderismo-B1\Rutas-Senderismo-Hito2\Rutas-Senderismo-Hito2\obj\Debug\Rutas-Senderismo-Hito2.csproj.CoreCompileInputs.cache
 C:\Users\Isaaki100\Desktop\IPO 1\Rutas-Senderismo-B1\Rutas-Senderismo-Hito2\Rutas-Senderismo-Hito2\obj\Debug\Rutas-Senderismo-Hito2.exe
 C:\Users\Isaaki100\Desktop\IPO 1\Rutas-Senderismo-B1\Rutas-Senderismo-Hito2\Rutas-Senderismo-Hito2\obj\Debug\Rutas-Senderismo-Hito2.pdb
+C:\Users\Isaaki100\Desktop\IPO 1\Rutas-Senderismo-B1\Rutas-Senderismo-Hito2\Rutas-Senderismo-Hito2\obj\Debug\Menu.g.cs
+C:\Users\Isaaki100\Desktop\IPO 1\Rutas-Senderismo-B1\Rutas-Senderismo-Hito2\Rutas-Senderismo-Hito2\obj\Debug\Menu.baml
