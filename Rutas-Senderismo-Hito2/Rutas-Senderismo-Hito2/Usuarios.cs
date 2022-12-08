@@ -6,18 +6,21 @@ using System.Threading.Tasks;
 
 namespace Rutas_Senderismo_Hito2
 {
-    class Usuarios
+    public class Usuarios
     {
         public string Nombre { set; get; }
         public string Apellido { set; get; }
         public string Usuario { set; get; }
         public string Contrasena { set; get; }
-        public Usuarios(string nombre, string apellido, string usuario, string contrasena)
+
+        public string Contacto { set; get; }
+        public Usuarios(string nombre, string apellido, string usuario, string contrasena, string contacto)
         {
             Nombre = nombre;
             Apellido = apellido;
             Usuario = usuario;
             Contrasena = contrasena;
+            Contacto = contacto;
         }
 
 

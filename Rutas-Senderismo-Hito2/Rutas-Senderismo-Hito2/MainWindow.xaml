@@ -43,8 +43,8 @@
         <Label x:Name="lblContraseña" Grid.Column="2" Content="Contraseña" HorizontalAlignment="Left" Grid.Row="4" VerticalAlignment="Top" FontSize="14" Width="90" Margin="0,7,0,0" Grid.RowSpan="2"/>
         <Button x:Name="btnLogin" Grid.Column="3" Content="Entrar" HorizontalAlignment="Center" Grid.Row="6" VerticalAlignment="Center" Height="32" Width="128" FontSize="14" Click="btnLogin_Click"/>
 
-        <PasswordBox x:Name="ContraseñaBox" Grid.Column="2" HorizontalAlignment="Center" Grid.Row="5" VerticalAlignment="Center" Width="276" Height="36" Grid.ColumnSpan="2" KeyUp="ContraseñaBox_KeyUp" />
-        <CheckBox x:Name="CheckBoxContraseña" Grid.Column="2" Content="Visualizar contraseña" HorizontalAlignment="Left" Margin="10,5,0,0" Grid.Row="6" VerticalAlignment="Top" Height="32" Width="123" FontSize="10" Click="CheckBoxContraseña_Click"/>
+        <PasswordBox x:Name="ContraseñaBox" Grid.Column="2" HorizontalAlignment="Center" Grid.Row="5" VerticalAlignment="Center" Width="276" Height="36" Grid.ColumnSpan="2" />
+        <CheckBox x:Name="CheckBoxContraseña" Grid.Column="2" Content="Visualizar contraseña" HorizontalAlignment="Left" Margin="10,5,0,0" Grid.Row="6" VerticalAlignment="Top" Height="26" Width="123" FontSize="10" Click="CheckBoxContraseña_Click"/>
         <Label x:Name="lbl_incorrectocampos" Grid.Column="2" Content="Usuario o contraseña incorrectos" HorizontalAlignment="Left" Margin="102,10,0,0" Grid.Row="2" VerticalAlignment="Top" Height="31" Width="228" Grid.RowSpan="2" FontSize="11" FontWeight="Bold" Foreground="#FFFD0606" Grid.ColumnSpan="3" d:IsHidden="True"/>
 
     </Grid>

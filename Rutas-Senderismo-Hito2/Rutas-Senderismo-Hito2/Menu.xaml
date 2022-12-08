@@ -5,8 +5,190 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Rutas_Senderismo_Hito2"
         mc:Ignorable="d"
-        Title="Menu" Height="450" Width="800">
+        Title="Menu" Height="600" Width="1000" ResizeMode="NoResize">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="422*"/>
+            <ColumnDefinition Width="350*"/>
+            <ColumnDefinition Width="165*"/>
+            <ColumnDefinition Width="63*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="16*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="67*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="380*"/>
+            <RowDefinition Height="0*"/>
+        </Grid.RowDefinitions>
+        <Rectangle x:Name="colorFondo" Stroke="#FFFBF6F6" Grid.ColumnSpan="4" Grid.RowSpan="9" Fill="#FFE3E9FF"/>
+
+        <Label x:Name="TtlSenderismo" Content="Rutas Senderismo" HorizontalAlignment="Left" VerticalAlignment="Center" Height="80" Width="330" FontSize="36" Grid.RowSpan="4" Grid.Row="1"/>
+        <GroupBox x:Name="InformacionUsuario"  Grid.Column="1" Margin="10,4,62,0" Grid.ColumnSpan="3" Grid.RowSpan="5" >
+            <Grid x:Name="DiseñoUsuario" Margin="0,0,160,0" Height="101">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25*"/>
+                    <RowDefinition Height="25*"/>
+                    <RowDefinition Height="25*"/>
+                    <RowDefinition Height="25*"/>
+                    <RowDefinition Height="13*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="118*"/>
+                    <ColumnDefinition Width="129*"/>
+                </Grid.ColumnDefinitions>
+                <Label x:Name="lbl_NombreUsuario" Content="Nombre:" VerticalAlignment="Center" FontSize="10" Height="23" Margin="109,0,2,0"/>
+                <Label x:Name="lbl_ApellidoUsuario" Content="Apellidos:" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Center" Height="22" Width="56" FontSize="10" Margin="104,0,0,0" Grid.ColumnSpan="2"/>
+                <Label x:Name="lbl_ContactoUsuario" Content="Contacto:" Grid.Row="2" Width="54" FontSize="10" RenderTransformOrigin="0.5,0.5" Margin="106,0,0,0" HorizontalAlignment="Left" Grid.ColumnSpan="2">
+                    <Label.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform AngleY="0"/>
+                            <RotateTransform/>
+                            <TranslateTransform Y="0"/>
+                        </TransformGroup>
+                    </Label.RenderTransform>
+                </Label>
+                <Label x:Name="lbl_UltimoUsuario" Content="Fecha de último acceso:" Grid.Row="3" VerticalAlignment="Center" Height="22" FontSize="10" Margin="43,0,174,0" Grid.ColumnSpan="2"/>
+                <Label x:Name="lbl_infoNombre" Grid.Column="1" Content="" HorizontalAlignment="Center" VerticalAlignment="Center" Width="174" Height="23" FontSize="10"/>
+                <Label x:Name="lbl_infoApellidos" Content="" HorizontalAlignment="Center" VerticalAlignment="Center" Width="174" Height="23" FontSize="10" Grid.Column="1" Grid.Row="1"/>
+                <Label x:Name="lbl_infoContacto" Content="" HorizontalAlignment="Center" VerticalAlignment="Center" Width="174" Height="22" FontSize="10" Grid.Column="1" Grid.Row="2"/>
+                <Label x:Name="lbl_infoUltimoAcceso" Content="" HorizontalAlignment="Center" VerticalAlignment="Center" Width="174" Height="22" FontSize="10" Grid.Row="3" Grid.Column="1"/>
+            </Grid>
+        </GroupBox>
+        <Image x:Name="UsuarioImagen" Grid.Column="2" Margin="0,6,1,2" RenderTransformOrigin="0.507,0.466" Grid.RowSpan="5"/>
+        <Button x:Name="BtnSalir" Grid.Column="3" Content="Salir" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.16,0.332" Height="27" Width="64" Grid.Row="1"/>
+        <Button x:Name="BtnAjustes" Grid.Column="3" Content="Ajustes" HorizontalAlignment="Center" VerticalAlignment="Center" Height="25" Width="63" Grid.Row="2"/>
+        <Button x:Name="BtnAyuda" Grid.Column="3" Content="Ayuda" HorizontalAlignment="Center" VerticalAlignment="Center" Height="28" Width="63" Grid.Row="3" RenderTransformOrigin="0.5,0.544"/>
+        <Button x:Name="BtnNoche" Content="Noche" Margin="0,25,0,2" Grid.Row="3" Grid.Column="3" Grid.RowSpan="2" RenderTransformOrigin="0.561,0.399"/>
+        <TabControl x:Name="tcPestañas" Margin="0,2,0,0" Grid.RowSpan="5" Grid.ColumnSpan="4" Grid.Row="4">
+            <TabItem x:Name="tbRutas" Header="Rutas">
+                <Grid Background="#FFE5F3F5" Margin="0,0,-2,-3" RenderTransformOrigin="0.788,0.675">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="52*"/>
+                        <ColumnDefinition Width="50*"/>
+                        <ColumnDefinition Width="50*"/>
+                        <ColumnDefinition Width="50*"/>
+                        <ColumnDefinition Width="50*"/>
+                        <ColumnDefinition Width="50*"/>
+                        <ColumnDefinition Width="50*"/>
+                        <ColumnDefinition Width="50*"/>
+                        <ColumnDefinition Width="50*"/>
+                        <ColumnDefinition Width="539*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="33*"/>
+                        <RowDefinition Height="25*"/>
+                        <RowDefinition Height="19*"/>
+                        <RowDefinition Height="363*"/>
+                    </Grid.RowDefinitions>
+                    <TabControl x:Name="tcInfoAdicional" Margin="10,1,16,10" Grid.Column="9" Grid.RowSpan="2" Grid.Row="2">
+                        <TabItem x:Name="tb_InfoPrincipal" Header="Info Principal">
+                            <Grid Background="#FFB1E4D0" RenderTransformOrigin="0.463,0.292">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="200*"/>
+                                    <RowDefinition Height="30*"/>
+                                    <RowDefinition Height="30*"/>
+                                    <RowDefinition Height="30*"/>
+                                    <RowDefinition Height="30*"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="30*"/>
+                                    <RowDefinition Height="30*"/>
+                                    <RowDefinition Height="20*"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="10*"/>
+                                    <ColumnDefinition Width="186*"/>
+                                    <ColumnDefinition Width="278*"/>
+                                    <ColumnDefinition Width="10*"/>
+                                </Grid.ColumnDefinitions>
+                                <Image x:Name="imgInfoAdicionalPrincipal" Grid.ColumnSpan="2" Height="171" Margin="10,10,11,0" VerticalAlignment="Top" Grid.Column="1"/>
+                                <Label x:Name="lbl_FechaHora" Grid.Column="1" Content="Fecha y hora:" HorizontalAlignment="Left" Grid.Row="1" Width="81" VerticalAlignment="Center" Grid.ColumnSpan="2" Margin="115,0,0,0" Height="25"/>
+                                <Label x:Name="lbl_GuiaAsignado" Grid.Column="1" Content="Guia Asignado:" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Center" Width="91" Grid.ColumnSpan="2" Margin="105,0,0,0" Height="27"/>
+                                <Label x:Name="lbl_DuracionEstimada" Grid.Column="1" Content="Duración estimada:" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Center" Width="112" Margin="84,0,0,0" Grid.ColumnSpan="2" Height="26"/>
+                                <Label x:Name="lbl_MaterialNecesario" Grid.Column="1" Content="Material necesario:" HorizontalAlignment="Left" Grid.Row="4" VerticalAlignment="Center" Width="112" Margin="84,0,0,0" Grid.ColumnSpan="2" Height="26"/>
+                                <Label x:Name="lbl_Acceso" Grid.Column="1" Content="Acceso origen/vuelta:" HorizontalAlignment="Left" Grid.Row="6" VerticalAlignment="Center" Width="126" Margin="70,0,0,0" RenderTransformOrigin="0.474,0.618" Grid.ColumnSpan="2" Height="27"/>
+                                <Label x:Name="lbl_Comida" Grid.Column="1" Content="Comida:" HorizontalAlignment="Left" Grid.Row="7" VerticalAlignment="Center" Width="56" Margin="140,0,0,0" RenderTransformOrigin="0.474,0.618" Grid.ColumnSpan="2" Height="26"/>
+                                <Label x:Name="lbl_InfoFechaHora" Grid.Column="2" Content="" HorizontalAlignment="Center" Grid.Row="1" FontSize="10" Width="292" VerticalAlignment="Center" Height="27"/>
+                                <Label x:Name="lbl_InfoGuiaAsignado" Grid.Column="2" Content="" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" FontSize="10" Width="292" Height="27"/>
+                                <Label x:Name="lbl_InfoDuracionEstimada" Grid.Column="2" Content="" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" FontSize="10" Width="292" Height="27"/>
+                                <Label x:Name="lbl_InfoMaterialNecesario" Grid.Column="2" Content="" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" FontSize="10" Width="291" Height="26"/>
+                                <RadioButton x:Name="rb_Autobus" Grid.Column="2" Content="Autobús" HorizontalAlignment="Left" Grid.Row="6" VerticalAlignment="Center" Margin="3,0,0,0"/>
+                                <RadioButton x:Name="rb_VehiculoPersonal" Grid.Column="2" Content="Vehículo personal" HorizontalAlignment="Left" Grid.Row="6" VerticalAlignment="Center" Margin="82,0,0,0"/>
+                                <RadioButton x:Name="rb_ComidaIncluida" Grid.Column="2" Content="Incluida" HorizontalAlignment="Left" Grid.Row="7" VerticalAlignment="Center" Margin="3,0,0,0"/>
+                                <RadioButton x:Name="rb_ComidaNoIncluida" Grid.Column="2" Content="No incluida" HorizontalAlignment="Left" Grid.Row="7" VerticalAlignment="Center" Margin="82,0,0,0"/>
+                            </Grid>
+                        </TabItem>
+                        <TabItem x:Name="tb_Excursionistas" Header="Excursionistas">
+                            <Grid Background="#FFB5E6CE" Margin="0,0,-2,1" RenderTransformOrigin="0.494,0.553">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="77*"/>
+                                    <RowDefinition Height="30*"/>
+                                    <RowDefinition Height="30*"/>
+                                    <RowDefinition Height="196*"/>
+                                    <RowDefinition Height="16*"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="20*"/>
+                                    <ColumnDefinition Width="137*"/>
+                                    <ColumnDefinition Width="40*"/>
+                                    <ColumnDefinition Width="295*"/>
+                                    <ColumnDefinition Width="20*"/>
+                                </Grid.ColumnDefinitions>
+                                <ListBox Grid.Row="2" d:ItemsSource="{d:SampleData ItemCount=5}" Grid.ColumnSpan="4" Margin="20,30,0,0" Grid.RowSpan="2"/>
+                                <Label x:Name="lblAsistentes" Content="Número de Asistentes:" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Center" RenderTransformOrigin="0.401,0.463" Height="26" Width="130" Margin="20,0,0,0" Grid.ColumnSpan="2"/>
+                                <Label x:Name="lblNoAsistentes" Content="" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.401,0.463" Height="26" Width="19" Grid.Column="2" Grid.Row="1"/>
+                            </Grid>
+                        </TabItem>
+                        <TabItem x:Name="tb_Pdi" HorizontalAlignment="Center" Height="20" Header="Puntos de Interés" VerticalAlignment="Top" Width="105" Margin="0,-1,0,0">
+                            <Grid Background="#FFE5E5E5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="10*"/>
+                                    <ColumnDefinition Width="78*"/>
+                                    <ColumnDefinition Width="415*"/>
+                                    <ColumnDefinition Width="7*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="8*"/>
+                                    <RowDefinition Height="152*"/>
+                                    <RowDefinition Height="28*"/>
+                                    <RowDefinition Height="33*"/>
+                                    <RowDefinition Height="33*"/>
+                                    <RowDefinition Height="33*"/>
+                                    <RowDefinition Height="63*"/>
+                                </Grid.RowDefinitions>
+                                <Image x:Name="Carousell" Margin="10,0,0,1" Grid.ColumnSpan="3" Grid.Row="1"/>
+                                <Label x:Name="lbl_NombrePdi" Content="Nombre:" Grid.Row="3" VerticalAlignment="Center" Height="33" Margin="10,0,0,0" Grid.ColumnSpan="2"/>
+                                <Label x:Name="lbl_DescripcionPdi" Content="Descripción:" Grid.Row="3" Margin="10,33,0,0" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+                                <Label x:Name="lbl_TipologiaPdi" Content="Tipologia:" HorizontalAlignment="Center" Grid.Row="5" VerticalAlignment="Center" Width="78" Grid.Column="1" Height="33"/>
+                                <Label x:Name="lbl_InfoNombrePdi1" Content="" Grid.Row="2" VerticalAlignment="Top" Height="33" Margin="1,27,0,0" Grid.Column="2" Grid.RowSpan="2"/>
+                                <Label x:Name="lbl_InfoDescripcionPdi" Content="" Grid.Row="3" Margin="1,32,3,1" Grid.RowSpan="2" Grid.Column="2"/>
+                                <Label x:Name="lbl_InfoTipologiaPdi" Content="" HorizontalAlignment="Center" Grid.Row="5" VerticalAlignment="Center" Width="412" Grid.Column="2" Height="33"/>
+                            </Grid>
+                        </TabItem>
+                        <TabItem x:Name="tbIncidencias" HorizontalAlignment="Center" Height="20" Header="Incidencias" VerticalAlignment="Top" Width="74" Margin="0,-1,0,0">
+                            <Grid Background="#FFE5E5E5">
+                                <ListBox x:Name="ListaIncidencias" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+                            </Grid>
+                        </TabItem>
+                    </TabControl>
+                    <ListBox x:Name="lstRutas"  SelectionChanged="ListBox_SelectionChanged" Margin="10,1,2,10" Grid.ColumnSpan="9" Grid.Row="3"/>
+                    <Button x:Name="BtnAñadir" Content="Añadir" HorizontalAlignment="Center" VerticalAlignment="Center" Height="20" Width="40" Grid.Row="1" Grid.Column="1"/>
+                    <Button x:Name="BtnEliminar" Content="Eliminar" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.492,0.628" Grid.Column="4" Height="20" Width="48" Grid.Row="1"/>
+                    <Button x:Name="BtnEditar" Content="Editar" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="7" Height="20" Width="50" Grid.Row="1"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="tbSenderistas" HorizontalAlignment="Center" Height="20" Header="Guias Senderistas" VerticalAlignment="Top" Width="118" Margin="0,-1,0,0">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem x:Name="tbExcursionistas" HorizontalAlignment="Center" Height="20" Header="Excursionistas" VerticalAlignment="Top" Width="98" Margin="0,-1,0,0">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+        </TabControl>
+
     </Grid>
 </Window>
